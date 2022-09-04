@@ -20,9 +20,6 @@ class Logged_main_page(Base):
     def get_new_repos_btn(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.new_repos_btn_locator)))
 
-    def get_golang_url_btn(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.golang_url_btn_locator)))
-
 
     """Actions"""
 
@@ -39,7 +36,8 @@ class Logged_main_page(Base):
 
     """Methods"""
 
-    def new_repos(self):
-        self.driver.get(self.url)
+    def new_repos_navigate(self):
         self.click_drop_down_btn()
+        self.get_screenshot()
+        self.click_new_repos_btn()
 

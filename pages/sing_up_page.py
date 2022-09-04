@@ -73,3 +73,5 @@ class Sing_up_page(Base):
         self.input_email("example@gmail.com")
         self.input_password("somepass123")
         self.input_password2("somepass123")
+        self.get_screenshot()
+        self.click_sing_up_btn()

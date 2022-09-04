@@ -26,9 +26,6 @@ class Main_page(Base):
     def get_golang_url_btn(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.golang_url_btn_locator)))
 
-    def get_port_bar(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.port_bar_locator)))
-
     def get_registration_btn(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.registration_btn)))
 
@@ -49,7 +46,6 @@ class Main_page(Base):
         self.get_golang_url_btn()
         print("Кнопка с url к golang существует")
 
-
     def click_registration_btn(self):
         self.get_registration_btn().click()
         print("Нажата кнопка установки параметров gitea")
@@ -62,4 +58,5 @@ class Main_page(Base):
         self.exist_source_code_url()
         self.exist_golang_url_btn()
         self.exist_docker_url_btn()
-
+        self.get_screenshot()
+        self.click_registration_btn()

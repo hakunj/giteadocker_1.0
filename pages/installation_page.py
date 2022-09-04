@@ -24,7 +24,7 @@ class Installation_page(Base):
     """Getters"""
 
     def exist_of_app_name(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.app_name_bar_locator)))
+        return WebDriverWait(self.driver, 15).until(EC.element_to_be_clickable((By.XPATH, self.app_name_bar_locator)))
 
     def get_root_path_bar(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.root_path_bar_locator)))
@@ -72,3 +72,5 @@ class Installation_page(Base):
         self.click_domain_bar()
         self.click_root_path_bar()
         self.click_port_bar()
+        self.get_screenshot()
+        self.click_primary_btn()
