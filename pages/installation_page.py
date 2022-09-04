@@ -72,5 +72,5 @@ class Installation_page(Base):
         self.click_domain_bar()
         self.click_root_path_bar()
         self.click_port_bar()
-        self.get_screenshot()
+        # self.get_screenshot()
         self.click_primary_btn()

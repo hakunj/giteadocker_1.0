@@ -58,5 +58,5 @@ class Main_page(Base):
         self.exist_source_code_url()
         self.exist_golang_url_btn()
         self.exist_docker_url_btn()
-        self.get_screenshot()
+        # self.get_screenshot()
         self.click_registration_btn()

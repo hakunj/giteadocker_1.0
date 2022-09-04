@@ -1,5 +1,4 @@
 from base.base_class import Base
-from random import randint
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -40,6 +39,5 @@ class Repos_page(Base):
 
     def create_new_file_link(self):
         self.click_add_file_btn()
-        self.get_screenshot()
         self.click_new_file_btn()
 

@@ -1,11 +1,8 @@
 import time
-import pytest
 from selenium import webdriver
 from base.base_class import Base
 from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+
 
 from pages.create_new_file_page import Create_new_file_page
 from pages.create_new_repos_page import Create_new_repos_page
@@ -16,7 +13,7 @@ from pages.new_file_page import New_file_page
 from pages.repos_page import Repos_page
 from pages.sing_up_page import Sing_up_page
 
-"""Включаем локальный сервер gitea с помощью фикстуры docker-compose"""
+"""Включаем локальный сервер gitea с помощью фикстуры из docker-compose"""
 def smoke_test_gitea_1(docker_services):
 
     """В путь необходимо вписать директорию к вашему chromedriver"""
@@ -43,7 +40,6 @@ def smoke_test_gitea_1(docker_services):
         try:
             driver.refresh()
             ip.install_default_options()
-            ip.get_screenshot()
             ip.assert_word(ip.get_page_header(), "Начальная конфигурация")
             ip.click_primary_btn()
         except TimeoutException:
