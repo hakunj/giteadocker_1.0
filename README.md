@@ -1,6 +1,6 @@
 ### giteadocker_1.0
-### Version 1.0
-### Для запуска требуются Docker version 20.10.17(build 100c701),   python 3.8+, совместимые chrome и chrome driver.
+### Version 1.1
+### Для запуска требуются Docker version 20.10.17(build 100c701) (win 10),   python 3.8+, совместимые chrome и chrome driver.
 ### В  терминале прописываем 
 - pip3 install pytest 
 - pip3 install docker-compose
