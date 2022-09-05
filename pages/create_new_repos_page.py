@@ -11,7 +11,7 @@ class Create_new_repos_page(Base):
     """Селекторы"""
 
     repo_name_locator  = "//input[@id='repo_name']"
-    repo_init_locator  = "//input[@name='auto_init']"
+    repo_init_locator  = "//*[@id='auto-init']/label"
     create_repo_locator = "//button[@class='ui green button']"
 
     """Getters"""
@@ -34,7 +34,7 @@ class Create_new_repos_page(Base):
 
     def click_repo_init(self):
         self.get_repo_init().click()
-        print("Нажата кнопка инициализации нового репозитория")
+        print("Нажата галочка инициализации нового репозитория")
 
     def click_create_repo(self):
         self.get_create_repo().click()
@@ -46,7 +46,7 @@ class Create_new_repos_page(Base):
     """Methods"""
 
     def create_new_repos(self):
-        self.input_repo_name("New project " + str(randint(0, 10000)))
+        self.input_repo_name("New_project_" + str(randint(0, 10000)))
         self.click_repo_init()
         self.click_create_repo()
 

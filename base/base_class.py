@@ -18,7 +18,6 @@ class Base():
         assert value_word == result
         print("Текст совпадает " + value_word + " и " + result)
 
-
     """ Method screenshot """
 
     # def get_screenshot(self):

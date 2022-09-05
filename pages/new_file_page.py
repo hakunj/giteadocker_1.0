@@ -10,7 +10,7 @@ class New_file_page(Base):
     some_text = "import selenium"
     """Селекторы"""
 
-    file_text_locator  = "//code[@class='code - inner']"
+    file_text_locator  = "//code[@class='code-inner']"
 
     """Getters"""
 

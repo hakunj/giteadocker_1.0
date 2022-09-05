@@ -38,6 +38,5 @@ class Logged_main_page(Base):
 
     def new_repos_navigate(self):
         self.click_drop_down_btn()
-        self.get_screenshot()
         self.click_new_repos_btn()
 

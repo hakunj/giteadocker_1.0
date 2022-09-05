@@ -48,15 +48,17 @@ class Main_page(Base):
 
     def click_registration_btn(self):
         self.get_registration_btn().click()
-        print("Нажата кнопка установки параметров gitea")
+        print("Нажата кнопка регистрации нового аккаунта в gitea")
 
 
     """Methods"""
 
     def check_main_page(self):
         self.driver.get(self.url)
+        self.driver.maximize_window()
         self.exist_source_code_url()
         self.exist_golang_url_btn()
         self.exist_docker_url_btn()
+        self.assert_word(self.get_page_header(), "Gitea: Git with a cup of tea")
         # self.get_screenshot()
         self.click_registration_btn()
